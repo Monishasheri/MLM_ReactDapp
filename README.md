@@ -1,2 +1,2 @@
 # MLM_ReactDapp
-MLM is implemented by using React and the library ether which is integrated with blockchain .
+The MLM system is implemented using React for the frontend and the Ethers.js library for blockchain integration,enabling seamless interaction with Ethereum smart contracts.
