@@ -1,0 +1,183 @@
+/* Main container */
+.mlm-container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px;
+    font-family: "Segoe UI", sans-serif;
+    background: linear-gradient(135deg, #f3f9ff, #fff);
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    border: 1px solid #007bff
+}
+
+/* Heading */
+.mlm-heading {
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    color: #1f3b58;
+    margin-bottom: 30px;
+    border-bottom: 3px solid #007bff;
+    padding-bottom: 12px;
+}
+
+/* Wallet Connect Button */
+.mlm-connect-btn {
+    background: linear-gradient(to right, #ff7f50, #ff4500);
+    color: #fff;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-bottom: 25px;
+    transition: background 0.3s ease;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.mlm-connect-btn:hover {
+    background: linear-gradient(to right, #ff5722, #e64a19);
+}
+
+/* Network Label */
+.network-label {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+/* Cards Wrapper */
+.card-wrapper {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+/* Card Buttons */
+.mlm-card {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+    background: #ffffff;
+    border: 2px solid #dbe9ff;
+    border-radius: 14px;
+    box-shadow: 0 6px 12px rgba(0, 123, 255, 0.08);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 16px;
+    font-weight: 600;
+    color: #007bff;
+}
+
+.mlm-card:hover {
+    background-color: #eaf4ff;
+    transform: translateY(-3px);
+}
+
+/* Form Styling */
+.mlm-form {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.mlm-form label {
+    font-weight: 600;
+    margin-top: 12px;
+    display: block;
+    color: #34495e;
+}
+
+.mlm-form input {
+    width: 100%;
+    padding: 10px 14px;
+    margin-top: 5px;
+    margin-bottom: 18px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.mlm-form button {
+    background-color: #28a745;
+    color: white;
+    padding: 12px;
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.mlm-form button:hover {
+    background-color: #218838;
+}
+
+/* User Details Card */
+.user-details-card {
+    margin-top: 30px;
+    padding: 25px;
+    border: 1px solid #dbe9ff;
+    border-radius: 14px;
+    background-color: #ffffff;
+    box-shadow: 0 6px 12px rgba(0, 123, 255, 0.08);
+}
+
+.user-details-card h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+/* User Table */
+.user-details-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+.user-details-table th,
+.user-details-table td {
+    border: 1px solid #ccc;
+    padding: 12px;
+    text-align: left;
+}
+
+.user-details-table th {
+    background-color: #007bff;
+    color: white;
+    font-weight: 600;
+}
+
+.user-details-table tr:nth-child(even) {
+    background-color: #f2f8ff;
+}
+
+.tree-container ul {
+    list-style-type: none;
+    padding-left: 20px;
+    border-left: 2px solid #ccc;
+}
+
+.tree-container li {
+    margin: 8px 0;
+    position: relative;
+}
+
+.tree-container li::before {
+    content: "";
+    position: absolute;
+    left: -12px;
+    top: 0;
+    width: 10px;
+    height: 2px;
+    background: #ccc;
+}
