@@ -1,12 +1,13 @@
 import { useState, useCallback } from "react";
 import { ethers, BrowserProvider } from "ethers";
 import "../Styles/MLM.css";
-
+import {dotenv} from "dotenv";
+dotenv.config();
 import TreeComponent from "./TreeNode";
 
 const ZERO_ADDRESS = "0x0000000000000000000000000000000000000000";
-const CONTRACT_TOKEN = "0x31eDA9109510e740DeD8C7fc48EC32e38ac2FD84";
-const CONTRACT_ADDRESS = "0x6AB8526bA06D5bb9AeD6B30e6bc08614C08DA835";
+const CONTRACT_TOKEN = process.env.CONTRACT_TOKEN;
+const CONTRACT_ADDRESS = process.env.CONTRACT_ADDRESS;
 const MLM_ABI = [
   {
     inputs: [
@@ -494,11 +495,11 @@ const MLM = () => {
       setIsConnected(true);
 
       console.log(
-        `✅ Connected to ${net.name} (Chain ID: ${Number(net.chainId)})`
+        `Connected to ${net.name} (Chain ID: ${Number(net.chainId)})`
       );
-      console.log(`✅ Account: ${selectedAccount}`);
+      console.log(` Account: ${selectedAccount}`);
     } catch (err) {
-      console.error("❌ Wallet connection failed:", err);
+      console.error(" Wallet connection failed:", err);
       setError(`Connection failed: ${err.message}`);
     }
   };
@@ -509,10 +510,9 @@ const MLM = () => {
 
   async function transferToken(account, amountBN) {
     const adminprovider = new ethers.JsonRpcProvider(
-      "https://sepolia.infura.io/v3/d1711e1923534fc6812c0b303a519d1d"
+      process.env.INFURA_URL
     );
-    const adminPrivateKey =
-      "86d10f6ecc55ad9fc90dab29be3a79d8d6d06eb93a118ad604474e8948a03751";
+    const adminPrivateKey =process.env.PRIVATE_KEY;
     const adminWallet = new ethers.Wallet(adminPrivateKey, adminprovider);
     const tokenContract = new ethers.Contract(
       CONTRACT_TOKEN,
